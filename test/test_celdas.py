@@ -8,3 +8,12 @@ def test_cantidadDeCeldas():
             contador+=celdas
 
     assert contador == 15
+
+def test_columnasVacias():
+    _carton = carton()
+    columnasValidas = 0
+    for indiceColumna in range(9):
+        if _carton[0][indiceColumna] or _carton[1][indiceColumna] or _carton[2][indiceColumna]:
+            columnasValidas+=1
+
+    assert columnasValidas == 9
