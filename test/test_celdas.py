@@ -17,3 +17,14 @@ def test_columnasVacias():
             columnasValidas+=1
 
     assert columnasValidas == 9
+
+def test_filasVacias():
+    _carton = carton()
+    filasValidas = 0
+    for filas in _carton:
+        for celdas in filas:
+            if celdas:
+                filasValidas+=1
+                break
+    
+    assert filasValidas == 3
