@@ -14,3 +14,6 @@ def test_columnasOcupadas():
 
 def test_filasOcupadas():
     assert bingo.filasOcupadas(_carton) == 3
+
+def test_celdasEntre1y90():
+    assert bingo.valoresValidos(_carton) == 15
