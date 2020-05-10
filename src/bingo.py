@@ -33,4 +33,12 @@ def filasOcupadas(_carton):
     
     return filasValidas
 
+def valoresValidos(_carton):
+    celdasValidas = 0
+    for fila in range(3):
+        for celda in range(9):
+            celdaActual = _carton[fila][celda]
+            if celdaActual >= 1 and celdaActual <= 90:
+                celdasValidas+=1
 
+    return celdasValidas
