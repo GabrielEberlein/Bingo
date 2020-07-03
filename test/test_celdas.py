@@ -17,3 +17,6 @@ def test_filasOcupadas():
 
 def test_celdasEntre1y90():
     assert bingo.valoresValidos(_carton) == 15
+
+def test_celdaInferior():
+    assert bingo.celdaInferior(_carton) == 27
