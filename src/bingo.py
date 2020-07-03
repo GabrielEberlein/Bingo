@@ -57,6 +57,13 @@ def celdaDerecha(_carton):
 
     return celdasValidas
 
+def celdasDiferentes(_carton):
+    valoresUnicos=0
+    for indiceFila in range(3):
+        valoresUnicos+=len(set(_carton[indiceFila]))-1
+
+    return valoresUnicos
+
 def valoresValidos(_carton):
     celdasValidas = 0
     for fila in range(3):
