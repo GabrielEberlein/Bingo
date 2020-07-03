@@ -20,3 +20,6 @@ def test_celdasEntre1y90():
 
 def test_celdaInferior():
     assert bingo.celdaInferior(_carton) == 27
+
+def test_celdaDerecha():
+    assert bingo.celdaDerecha(_carton) == 27

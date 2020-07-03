@@ -45,6 +45,18 @@ def celdaInferior(_carton):
 
     return celdasValidas
 
+def celdaDerecha(_carton):
+    celdasValidas=3
+    for indiceFila in range(3):
+        for indiceColumna in range(8):
+            if _carton[indiceFila][indiceColumna] and _carton[indiceFila][indiceColumna+1]:
+                if _carton[indiceFila][indiceColumna] < _carton[indiceFila][indiceColumna+1]:
+                    celdasValidas+=1
+            else:
+                celdasValidas+=1
+
+    return celdasValidas
+
 def valoresValidos(_carton):
     celdasValidas = 0
     for fila in range(3):
