@@ -33,6 +33,18 @@ def filasOcupadas(_carton):
     
     return filasValidas
 
+def celdaInferior(_carton):
+    celdasValidas=9
+    for indiceFila in range(2):
+        for indiceColumna in range(9):
+            if _carton[indiceFila][indiceColumna] and _carton[indiceFila+1][indiceColumna]:
+                if _carton[indiceFila][indiceColumna] < _carton[indiceFila+1][indiceColumna]:
+                    celdasValidas+=1
+            else:
+                celdasValidas+=1
+
+    return celdasValidas
+
 def valoresValidos(_carton):
     celdasValidas = 0
     for fila in range(3):
