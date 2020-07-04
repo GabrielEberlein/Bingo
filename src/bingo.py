@@ -25,7 +25,7 @@ def intentoCarton():
         return intentoCarton()
       
       numero = random.randint(1, 90)
-      columna = math.floor(numero / 10)
+      columna = int(math.floor(numero / 10))
 
       if columna == 9:
         columna = 8
@@ -72,11 +72,7 @@ def intentoCarton():
 
 def newCarton():
     while 1:
-        carton=(
-        (0,0,27,36,0,52,62,0,80),
-        (0,11,0,37,41,0,0,75,88),
-        (3,12,0,0,48,0,65,76,0)
-        )
+        carton=intentoCarton()
         if(
             columnasOcupadas(carton) == 9 and
             celdasOcupadasCarton(carton) == 15 and
@@ -115,7 +111,7 @@ def celdasOcupadasCarton(_carton):
     celdasOcupadas = 0
     for filas in _carton:
         celdasOcupadas += contarCeldasOcupadas(filas) 
-    return celdasOcupadas==15
+    return celdasOcupadas
 
 def cartonDe3x9(_carton):
     if(len(_carton[0])==len(_carton[1]) and len(_carton[1])==len(_carton[2])):
@@ -127,15 +123,15 @@ def columnasCon1CeldaOcupada(_carton):
     columnasValidas = 0
     for columnas in range(9):
         columna = (_carton[0][columnas],_carton[1][columnas],_carton[2][columnas])
-        if(bingo.contarCeldasOcupadas(columna) == 1):
+        if(contarCeldasOcupadas(columna) == 1):
             columnasValidas+=1
     
-    return columnasValidas == 3
+    return columnasValidas
 
 def menosDe3CeldasPorColumna(_carton):
     columnasInvalidas=0
     for columnas in range(9):
-        if(_carton[0][columnas] & _carton[1][columnas] & _carton[2][columnas]):
+        if(_carton[0][columnas] and _carton[1][columnas] and _carton[2][columnas]):
             columnasInvalidas+=1
     return columnasInvalidas
 
