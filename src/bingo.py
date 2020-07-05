@@ -80,7 +80,7 @@ def newCarton():
             columnasCon1CeldaOcupada(carton) == 3 and
             menosDe3CeldasPorColumna(carton) == 0 and
             valoresValidos(carton) == 15 and
-            celdaInferior(carton) == 27 and
+            celdaInferior(carton) == 9 and
             celdaDerecha(carton) == 27 and
             celdasDiferentes(carton) == 15 and
             filasCon5Celdas(carton) == 3 and
@@ -136,16 +136,18 @@ def menosDe3CeldasPorColumna(_carton):
     return columnasInvalidas
 
 def celdaInferior(_carton):
-    celdasValidas=9
-    for indiceFila in range(2):
-        for indiceColumna in range(9):
-            if _carton[indiceFila][indiceColumna] and _carton[indiceFila+1][indiceColumna]:
-                if _carton[indiceFila][indiceColumna] < _carton[indiceFila+1][indiceColumna]:
-                    celdasValidas+=1
-            else:
-                celdasValidas+=1
+    columnasValidas=0
+    list = []
+    for x in range(9):
+        list = []
+        for y in range(3):
+            if _carton[y][x] != 0:
+                list.append(_carton[y][x])
 
-    return celdasValidas
+        if list == sorted(list):
+            columnasValidas+=1
+
+    return columnasValidas
 
 def celdaDerecha(_carton):
     celdasValidas=3

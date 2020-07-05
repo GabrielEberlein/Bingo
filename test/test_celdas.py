@@ -22,7 +22,7 @@ def test_celdasConValoresValidos():
     assert bingo.valoresValidos(_carton) == 15
 
 def test_celdaInferior():
-    assert bingo.celdaInferior(_carton) == 27
+    assert bingo.celdaInferior(_carton) == 9
 
 def test_celdaDerecha():
     assert bingo.celdaDerecha(_carton) == 27
