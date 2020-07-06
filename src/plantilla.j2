@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+.carton {
+    margin-top: 60px;
+
+}
+
+.fila {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 18px Couriere;
+}
+
+.fila > div {
+    border:1px;
+    text-align: center;
+    width: 130px;
+    line-height: 125px;
+    margin: 0px;
+    border-style: solid;
+}
+</style>
+
+</head>
+<body>
+<div class='carton'>
+{% for fila in carton %}
+    <div class='fila'>
+    {% for celda in fila %}
+        {% if celda == 0 %}
+        <div style='background-color:#d7d8d8;'> <a style='color:#d7d8d8;'>{{celda}}</a> </div>
+        {% else %}
+        <div style='background-color:#c53ee9;'> {{celda}} </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+{% endfor %}
+</div>
+
+</body>
+</html>
