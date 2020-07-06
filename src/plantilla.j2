@@ -5,7 +5,7 @@
 <style>
 
 .carton {
-    margin-top: 60px;
+    margin-top: 10%;
 
 }
 
@@ -13,12 +13,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font: 18px Couriere;
+    font: 40px Impact, Charcoal, sans-serif;
 }
 
 .fila > div {
     border:1px;
     text-align: center;
+    background-size: 130px 125px;
     width: 130px;
     line-height: 125px;
     margin: 0px;
@@ -35,7 +36,7 @@
         {% if celda == 0 %}
         <div style='background-color:#d7d8d8;'> <a style='color:#d7d8d8;'>{{celda}}</a> </div>
         {% else %}
-        <div style='background-color:#c53ee9;'> {{celda}} </div>
+        <div style='background-image:url("Img/doge.jpeg");'> <a style='color:#bc06bc;'>{{celda}}</a> </div>
         {% endif %}
     {% endfor %}
     </div>
