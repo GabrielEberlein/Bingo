@@ -21,3 +21,27 @@ Usando el lenguaje Python traducimos una funcion que genera cartones de Bingo tr
   - Cada cartón debe tener 3 y solo 3 columnas con solo una celda ocupada.
   - En una fila no existen más de dos celdas vacías consecutivas.
   - En una fila no existen más de dos celdas ocupadas consecutivas.
+
+## :white_flower:Uso:white_flower:
+### Descarga
+Podes descargar el zip del repositorio o escribir este comando desde tu consola para clonarlo:
+```
+git clone https://github.com/GabrielEberlein/Bingo.git
+```
+### Ejecucion
+Para ejecutar el programa debes escribir el siguiente comando:
+```
+python imprimir_carton.py
+```
+Aclaración: En distros basadas en `Debian`, se debe ejecutar el programa usando `python3` en lugar de `python`, para usar la version 3.x del mismo.
+### Resultado
+El programa deberia devolver un carton valido como el siguiente:
+```
+[0, 17, 23, 0, 0, 51, 0, 75, 84]
+[5, 0, 25, 0, 0, 54, 0, 77, 86]
+[7, 18, 0, 38, 46, 0, 60, 0, 0]
+```
+Aclaracion: Los 0 son celdas vacias del carton.
+
+
+
