@@ -49,4 +49,4 @@ Aclaracion: Los 0 son celdas vacias del carton.
 
 Si usaste el comando para crear el html al abrirlo tendrias que ver un carton como este:
 
-
+![Bingo](img/Bingo.png?raw=true)<br>
