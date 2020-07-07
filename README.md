@@ -33,6 +33,10 @@ Para ejecutar el programa debes escribir el siguiente comando:
 ```
 python imprimir_carton.py
 ```
+Tambien podes escribir el siguiente comando para poder visualizar la version web en el html creado:
+```
+python bingo_web.py
+```
 Aclaración: En distros basadas en `Debian`, se debe ejecutar el programa usando `python3` en lugar de `python`, para usar la version 3.x del mismo.
 ### Resultado
 El programa deberia devolver un carton valido como el siguiente:
@@ -43,5 +47,6 @@ El programa deberia devolver un carton valido como el siguiente:
 ```
 Aclaracion: Los 0 son celdas vacias del carton.
 
+Si usaste el comando para crear el html al abrirlo tendrias que ver un carton como este:
 
 
